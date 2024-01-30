@@ -3,3 +3,11 @@ UP - NG-PR | DB-PR | LD-PR | LB-PR | SV-PR |
 1080 x 420 x 900  337.010.925 
 
 
+
+
+==============
+
+//template!!! 
+var skuCor = verificar_sku_cor()
+var skuLinha = '925'
+return '337.010.' + skuLinha + '.0' + skuCor;

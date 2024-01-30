@@ -1,0 +1,12 @@
+M15 - PRETO | CINZA | 
+
+1000 X 250  337.031.004 
+
+
+
+
+==============
+
+var skuCor = verificar_sku_cor()
+var skuLinha = '004'
+return '337.031.' + skuLinha + '.0' + skuCor;

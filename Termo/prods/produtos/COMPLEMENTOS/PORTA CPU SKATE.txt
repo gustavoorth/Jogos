@@ -1,0 +1,12 @@
+M15 - PRETO | CINZA | 
+
+280 X 460 X 65  337.010.115 
+
+
+
+
+==============
+
+var skuCor = verificar_sku_cor()
+var skuLinha = '115'
+return '337.010.' + skuLinha + '.0' + skuCor;

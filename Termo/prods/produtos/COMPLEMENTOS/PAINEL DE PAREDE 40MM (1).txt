@@ -1,0 +1,23 @@
+M40 - LB-PR | NG-PR | SV-PR | DB-PR | LD-PR | 
+
+1000 X 600  337.051.040 
+
+1200 X 600  337.051.140 
+
+
+
+
+==============
+
+var skuCor = verificar_sku_cor()
+var skuMedida
+switch (selecao_medidas) {
+  case '1000x600':
+    skuMedida = '0'
+    break;
+  case '1200x600':
+    skuMedida = '1'
+    break;
+}
+var skuLinha = skuMedida + linha
+return '337.051.' + skuLinha + '.0' + skuCor

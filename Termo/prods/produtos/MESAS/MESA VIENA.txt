@@ -1,0 +1,20 @@
+M25 - PRETO | BRANCO | CINZA | GRAFITE | GF-BR | GF-PR | LB-BR | LB-PR | NG-PR | SV-BR | SV-PR | DB-PR | LD-PR | 
+
+ESQ%3A
+
+1350 X 600  331.053.025 
+
+DIR%3A
+
+1350 X 600  331.043.025 
+
+
+
+
+==============
+
+//template!!! 
+var skuCor = verificar_sku_cor()
+var skuLado = (lado == 'esq') ? '053' : '043';
+var skuLinha = (linha == '40') ? '1' + linha : '1' + linha
+return '331.' + skuLado + '.' + skuLinha + '.0' + skuCor;

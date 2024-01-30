@@ -1,0 +1,23 @@
+M15 - PRETO | CINZA | 
+
+1200 X 400  337.030.315 
+
+1400 X 400  337.030.415 
+
+
+
+
+==============
+
+var skuCor = verificar_sku_cor()
+var skuMedida
+switch (selecao_medidas) {
+  case '1200x400':
+    skuMedida = '3'
+    break;
+  case '1400x400':
+    skuMedida = '4'
+    break;
+}
+var skuLinha = skuMedida + linha
+return '337.030.' + skuLinha + '.0' + skuCor

@@ -5,13 +5,13 @@ M15 - PRETO | CINZA |
 
 M25 - PRETO | BRANCO | CINZA | GRAFITE | GF-BR | GF-PR | LB-BR | LB-PR | NG-PR | SV-BR | SV-PR | DB-PR | LD-PR | 
 
-FUNDO 3MM
-
-805 X 1595 X 420  336.010.225 
-
 FUNDO 15MM
 
 805 X 1595 X 420  336.020.225 
+
+FUNDO 3MM
+
+805 X 1595 X 420  336.010.225 
 
 
 M30 - NG-PR | 
@@ -24,3 +24,17 @@ M40 - LB-PR | NG-PR | SV-PR | DB-PR | LD-PR |
 805 x 1610 x 420  336.010.240 
 
 
+
+
+==============
+
+function gerarSku() {
+  // Verifica a cor do SKU
+  var skuCor = verificar_sku_cor(cor);
+
+  // Ajusta o número da linha para o formato correto
+  var skuLinha = '2' + linha;
+
+  // Retorna o SKU gerado
+  return '336.010.' + skuLinha + '.0' + skuCor;
+}

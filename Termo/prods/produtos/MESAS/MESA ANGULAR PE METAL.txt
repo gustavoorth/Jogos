@@ -16,3 +16,25 @@ M25 - PRETO | BRANCO | CINZA | GRAFITE | GF-BR | GF-PR | LB-BR | LB-PR | NG-PR |
 1400 X 1400 X 600  332.010.925 
 
 
+
+
+==============
+
+var skuCor = verificar_sku_cor()
+var skuMedida
+switch (selecao_medidas) {
+  case '1200x1200':
+    skuMedida15 = '0'
+    skuMedida25 = '3'
+    break;
+  case '1200x1400':
+    skuMedida25 = '1'
+    skuMedida25 = '4'
+    break;
+  case '1400x1400':
+    skuMedida25 = '2'
+    skuMedida25 = '9'
+    break;
+}
+var skuLinha = (linha == '25') ? skuMedida25 + linha : skuMedida15 + linha
+return '332.010.' + skuLinha + '.0' + skuCor

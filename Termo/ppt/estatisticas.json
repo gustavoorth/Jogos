@@ -1,0 +1,12 @@
+{
+  "partidas_jogadas": 0,
+  "vitorias": 0,
+  "empates": 0,
+  "derrotas": 0,
+  "vezes_pedra": 0,
+  "vezes_papel": 0,
+  "vezes_tesoura": 0,
+  "vezes_inimigo_pedra": 0,
+  "vezes_inimigo_papel": 0,
+  "vezes_inimigo_tesoura": 0
+}

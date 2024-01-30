@@ -3,3 +3,10 @@ M25 - PRETO | BRANCO |
 1350 X 600  331.040.225 
 
 
+
+
+==============
+
+var skuCor = verificar_sku_cor()
+var skuLinha = '225'
+return '331.040.' + skuLinha + '.0' + skuCor;

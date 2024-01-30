@@ -33,7 +33,7 @@ foreach ($_POST as $linha) {
         foreach ($linha['cores'] as $key => $cor) {
             $textoFinal .= strtoupper($key) . ' | ';
         }
-        $textoFinal .= "\r\n\r\n"; // Use "\r\n" for line breaks
+        $textoFinal .= "\r\n\r\n";
         $txtLinhaUrl = urlencode($linha['txt']);
         $medidas = explode('%0A', $txtLinhaUrl);
         foreach ($medidas as $medida) {
@@ -42,7 +42,7 @@ foreach ($_POST as $linha) {
                 $textoFinal .= str_replace('-', '.', str_replace('+', ' ', $medidaFormatada)) . "\r\n\r\n"; // Use "\r\n" for line breaks
             }
         }
-        $textoFinal .= "\r\n"; // Use "\r\n" for line breaks
+        $textoFinal .= "\r\n";
     }
     $i++;
 }

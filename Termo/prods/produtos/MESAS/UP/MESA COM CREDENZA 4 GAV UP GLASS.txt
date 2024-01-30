@@ -5,3 +5,14 @@ UP - NG-PR | DB-PR | LD-PR | LB-PR | SV-PR |
 1800 X 800  331.070.425 
 
 
+
+
+==============
+
+var skuCor = verificar_sku_cor()
+switch (selecao_medidas) {
+  case '1500x800':
+    return '331.071.425.0' + skuCor
+  case '1800x800':
+    return '331.070.425.0' + skuCor
+}

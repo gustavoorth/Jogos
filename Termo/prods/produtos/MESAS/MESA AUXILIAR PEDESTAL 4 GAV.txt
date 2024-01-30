@@ -13,3 +13,10 @@ M40 - LB-PR | NG-PR | SV-PR | DB-PR | LD-PR |
 900 X 420  331.080.240 
 
 
+
+
+==============
+
+var skuCor = verificar_sku_cor()
+var skuLinha = '2' + linha
+return '331.080.' + skuLinha + '.0' + skuCor;

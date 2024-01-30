@@ -1,0 +1,28 @@
+M15 - PRETO | CINZA | 
+
+800 X 250 X 15  337.040.215 
+
+1000 X 250 X 15  337.040.315 
+
+1200 X 250 X 15  337.040.415 
+
+
+
+
+==============
+
+var skuCor = verificar_sku_cor()
+var skuMedida
+switch (selecao_medidas) {
+  case '800x250':
+    skuMedida = '2'
+    break;
+  case '1000x250':
+    skuMedida = '3'
+    break;
+  case '1200x250':
+    skuMedida = '4'
+    break;
+}
+var skuLinha = skuMedida + linha
+return '337.040' + skuLinha + '.0' + skuCor

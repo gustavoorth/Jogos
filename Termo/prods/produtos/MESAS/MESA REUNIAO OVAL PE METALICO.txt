@@ -9,3 +9,11 @@ SEM ABAS
 2000 x 1000  333.020.015 
 
 
+
+
+==============
+
+var skuCor = verificar_sku_cor()
+var skuLinha = '0' + linha
+var skuAbas = (abas == 'com') ? '010.' : '020.'
+return '333.' + skuAbas + skuLinha + '.0' + skuCor;

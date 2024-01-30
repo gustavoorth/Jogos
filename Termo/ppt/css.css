@@ -1,0 +1,53 @@
+.textContainer {
+    white-space: nowrap;
+    position: fixed;
+    top: 8%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    display: flex;
+}
+.textContainerAnim {
+    animation: myAnim 0.45s ease 0s 1 normal forwards;
+}
+@keyframes myAnim {
+	0% {
+		opacity: 0;
+		transform: scale(0.6);
+	}
+
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+.options{
+    white-space: nowrap;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+}
+.option{
+    width: 150px;
+    height: 130px;
+    background-color: white;
+    cursor: pointer;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    -webkit-transition: .5s ease-out;
+    -moz-transition: .5s ease-out;
+    -o-transition: .5s ease-out;
+    transition: .5s ease-out;
+}
+
+.background-on-hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.text-pre {
+    opacity: 1;
+}
+.d-none {
+    display: none!important;
+}

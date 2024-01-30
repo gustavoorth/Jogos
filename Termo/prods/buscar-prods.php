@@ -13,3 +13,8 @@ function get_all_txt_files($dir) {
   }
 
   $arquivos = get_all_txt_files('produtos');
+
+  function verify_sku($file) {
+    $texto = file_get_contents($file);
+    return strpos($texto, "verificar_sku_cor()") !== false;
+}

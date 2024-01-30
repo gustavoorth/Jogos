@@ -15,7 +15,7 @@ M30 - NG-PR |
 
 1000 X 600  331.020.130 
 
-1200 X600  331.030.130 
+1200 X 600  331.030.130 
 
 1500 X 600  331.050.130 
 
@@ -29,3 +29,31 @@ M40 - LB-PR | NG-PR | SV-PR | DB-PR | LD-PR |
 1700 X 700  331.070.040 
 
 
+
+
+==============
+
+var skuCor = verificar_sku_cor()
+var skuMedida
+switch (selecao_medidas) {
+  case '800x600':
+    skuMedida = '010.'
+    break;
+  case '1000x600':
+    skuMedida = '020.'
+    break;
+  case '1200x600':
+    skuMedida = (linha == '40') ? '020.' : '030.'
+    break;
+  case '1500x600':
+    skuMedida = '050.'
+    break;
+  case '1500x700':
+    skuMedida = '060.'
+    break;
+  case '1700x700':
+    skuMedida = '070.'
+    break;
+}
+var skuLinha = (linha == '40') ? '0' + linha : '1' + linha
+return '331.' + skuMedida + skuLinha + '.0' + skuCor

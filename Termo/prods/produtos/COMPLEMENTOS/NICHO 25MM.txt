@@ -1,0 +1,12 @@
+M25 - PRETO | BRANCO | CINZA | GRAFITE | GF-BR | GF-PR | LB-BR | LB-PR | NG-PR | SV-BR | SV-PR | DB-PR | LD-PR | 
+
+1196 X 355 X 420  337.013.025 
+
+
+
+
+==============
+
+var skuCor = verificar_sku_cor()
+var skuLinha = '025'
+return '337.013.' + skuLinha + '.0' + skuCor;

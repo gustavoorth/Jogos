@@ -5,3 +5,19 @@ M30 - NG-PR |
 1500 X 1700  332.020.330 
 
 
+
+
+==============
+
+var skuCor = verificar_sku_cor()
+var skuMedida
+switch (selecao_medidas) {
+  case '1500x1500':
+    skuMedida = '4'
+    break;
+  case '1500x1700':
+    skuMedida = '3'
+    break;
+}
+var skuLinha = skuMedida + linha
+return '332.020.' + skuLinha + '.0' + skuCor

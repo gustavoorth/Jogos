@@ -1,0 +1,24 @@
+M15 - PRETO | CINZA | 
+
+SEM ABAS
+
+600 X600  334.010.215 
+
+COM ABAS
+
+600 X600  334.010.115 
+
+
+M25 - PRETO | BRANCO | CINZA | GRAFITE | GF-BR | GF-PR | LB-BR | LB-PR | NG-PR | SV-BR | SV-PR | DB-PR | LD-PR | 
+
+600 X 600  334.010.025 
+
+
+
+
+==============
+
+var skuCor = verificar_sku_cor()
+var skuAbas = (abas == 'com') ? '1' : '2';
+var skuLinha = skuAbas + linha
+return '334.010.' + skuLinha + '.0' + skuCor;

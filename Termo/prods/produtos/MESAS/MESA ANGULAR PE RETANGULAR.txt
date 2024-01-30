@@ -3,3 +3,10 @@ M25 - PRETO | BRANCO | CINZA | GRAFITE | GF-BR | GF-PR | LB-BR | LB-PR | NG-PR |
 1500 x 1500 X 755  332.012.025 
 
 
+
+
+==============
+
+var skuCor = verificar_sku_cor()
+var skuLinha = '0' + linha
+return '332.012.' + skuLinha + '.0' + skuCor;
