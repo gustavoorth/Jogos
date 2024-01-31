@@ -1,0 +1,87 @@
+.textContainer {
+  white-space: nowrap;
+  position: fixed;
+  margin-top: 2rem;
+  width: 100%;
+  justify-content: center;
+  transform: translate(-50%, -50%);
+  display: flex;
+}
+.textContainerBottom {
+    font-size: 0.5rem;
+    position: fixed;
+    margin-top: 19rem;
+    width: 100%;
+    justify-content: center;
+    transform: translate(-50%, -50%);
+    display: flex;
+  }
+.textContainerAnim {
+  animation: textAnim 0.45s ease 0s 1 normal forwards;
+}
+@keyframes textAnim {
+  0% {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.options {
+  white-space: nowrap;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+}
+.option {
+  width: 150px;
+  height: 130px;
+  background-color: white;
+  cursor: pointer;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  -webkit-transition: 0.5s ease-out;
+  -moz-transition: 0.5s ease-out;
+  -o-transition: 0.5s ease-out;
+  transition: 0.5s ease-out;
+}
+
+.background-on-hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.text-pre {
+  opacity: 1;
+}
+.d-none {
+  display: none !important;
+}
+.gameAnimation {
+  animation: gameAnim 0.15s linear 0s 1 normal forwards;
+}
+@keyframes gameAnim {
+  0% {
+    opacity: 0;
+    transform: translateY(-125px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+#textInfo{
+    text-align: -webkit-center;
+}
+.buttons{
+    margin-left: 2rem;
+    background-color: white;
+    border: none;
+    font-size: 0.5rem;
+}
+.v-hidden{
+    visibility: hidden!important;
+}
