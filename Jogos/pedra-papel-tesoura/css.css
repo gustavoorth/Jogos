@@ -1,8 +1,8 @@
 .textContainer {
     white-space: nowrap;
     position: fixed;
-    top: 8%;
-    left: 20%;
+    top: 10%;
+    left: 22%;
     transform: translate(-50%, -50%);
     display: flex;
 }

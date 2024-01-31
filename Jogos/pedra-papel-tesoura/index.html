@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pedra, Papel ou Tesoura</title>
-    <link href="css.css" rel="stylesheet" />
-  </head>
-  <body>
-      <div id="textContainer" class="textContainer textContainerAnim">
-        <pre id="textInfo">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pedra, Papel ou Tesoura</title>
+  <link href="css.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="textContainer" class="textContainer textContainerAnim">
+    <pre id="textInfo">
   _____      _           _                     _____               __  __  /\/|       
  / ____|    | |         (_)                   / ____|             |  \/  ||/\/        
 | (___   ___| | ___  ___ _  ___  _ __   ___  | (___  _   _  __ _  | \  / | __ _  ___  
@@ -16,12 +18,12 @@
  ____) |  __/ |  __/ (__| | (_) | | | |  __/  ____) | |_| | (_| | | |  | | (_| | (_) |
 |_____/ \___|_|\___|\___|_|\___/|_| |_|\___| |_____/ \__,_|\__,_| |_|  |_|\__,_|\___/ 
         </pre>
-      </div>
-    <div id="options" class="options">
-      <div class="optionContainer">
-        <button type="button" id="rock" class="option">
+  </div>
+  <div id="options" class="options">
+    <div class="optionContainer">
+      <button type="button" id="rock" class="option">
 
-<pre id="rockContainer" class="text-pre">
+        <pre id="rockContainer" class="text-pre">
     _______
 ---'   ____)
         (_____)
@@ -30,12 +32,12 @@
 ---.__(___)
 </pre>
 
-        </button>
-      </div>
-      <div class="optionContainer">
-        <button type="button" id="paper" class="option" >
+      </button>
+    </div>
+    <div class="optionContainer">
+      <button type="button" id="paper" class="option">
 
-<pre id="paperContainer" class="text-pre">
+        <pre id="paperContainer" class="text-pre">
 _______
 ---'    ____)____
            ______)
@@ -44,12 +46,12 @@ _______
 ---.__________)
 </pre>
 
-        </button>
-      </div>
-      <div class="optionContainer">
-        <button type="button" id="scissors" class="option">
+      </button>
+    </div>
+    <div class="optionContainer">
+      <button type="button" id="scissors" class="option">
 
-<pre id="scissorsContainer" class="text-pre">
+        <pre id="scissorsContainer" class="text-pre">
 _______
 ---'   ____)____
             ______)
@@ -58,10 +60,27 @@ _______
 ---.__(___)
 </pre>
 
-        </button>
-      </div>
+      </button>
     </div>
-    <pre id="selectRockText" class="d-none">
+    <div id="versusContainer" class="optionContainer d-none">
+      <pre>
+__      _______ 
+\ \    / / ____|
+ \ \  / / (___  
+  \ \/ / \___ \ 
+   \  /  ____) |
+    \/  |_____/ 
+  </pre>
+    </div>
+    <div id="enemyContainer" class="optionContainer d-none">
+      <button type="button" id="enemyButton" class="option">
+<pre class="text-pre">
+
+</pre>
+</button>
+    </div>
+  </div>
+  <pre id="selectRockText" class="d-none">
       _                           _____                  _____         _           
      | |                         / ____|                |  __ \       | |          
      | | ___   __ _  __ _ _ __  | |     ___  _ __ ___   | |__) |__  __| |_ __ __ _ 
@@ -71,7 +90,7 @@ _______
                __/ |                                                               
               |___/                                                                
     </pre>
-    <pre id="selectPaperText" class="d-none">
+  <pre id="selectPaperText" class="d-none">
       _                           _____                  _____                 _ 
      | |                         / ____|                |  __ \               | |
      | | ___   __ _  __ _ _ __  | |     ___  _ __ ___   | |__) |_ _ _ __   ___| |
@@ -81,7 +100,7 @@ _______
                __/ |                                               | |           
               |___/                                                |_|           
     </pre>
-    <pre id="selectScissorsText" class="d-none">
+  <pre id="selectScissorsText" class="d-none">
       _                           _____                  _______                              
      | |                         / ____|                |__   __|                             
      | | ___   __ _  __ _ _ __  | |     ___  _ __ ___      | | ___  ___  ___  _   _ _ __ __ _ 
@@ -91,6 +110,33 @@ _______
                __/ |                                                                          
               |___/                                                                           
     </pre>
-    <script src="js.js"></script>
-  </body>
+<pre id="textWin" class="d-none">
+  _____          _   _ _    _  ____  _    _    _   _   _ 
+ / ____|   /\   | \ | | |  | |/ __ \| |  | |  | | | | | |
+| |  __   /  \  |  \| | |__| | |  | | |  | |  | | | | | |
+| | |_ | / /\ \ | . ` |  __  | |  | | |  | |  | | | | | |
+| |__| |/ ____ \| |\  | |  | | |__| | |__| |  |_| |_| |_|
+ \_____/_/    \_\_| \_|_|  |_|\____/ \____/   (_) (_) (_)
+                                                                                                            
+</pre>
+<pre id="textDraw" class="d-none">
+ ______ __  __ _____     _______ ______ 
+|  ____|  \/  |  __ \ /\|__   __|  ____|
+| |__  | \  / | |__) /  \  | |  | |__   
+|  __| | |\/| |  ___/ /\ \ | |  |  __|  
+| |____| |  | | |  / ____ \| |  | |____ 
+|______|_|  |_|_| /_/    \_\_|  |______|
+</pre>
+<pre id="textLose" class="d-none">
+  _____  ______ _____  _____  ______ _    _    __      
+ |  __ \|  ____|  __ \|  __ \|  ____| |  | |   \ \   _ 
+ | |__) | |__  | |__) | |  | | |__  | |  | |    | | (_)
+ |  ___/|  __| |  _  /| |  | |  __| | |  | |    | |    
+ | |    | |____| | \ \| |__| | |____| |__| |    | |  _ 
+ |_|    |______|_|  \_\_____/|______|\____/     | | (_)
+                                               /_/ 
+</pre>
+  <script src="js.js"></script>
+</body>
+
 </html>

@@ -1,5 +1,10 @@
-const choices = document.querySelectorAll('.option');
+const rock = document.getElementById('rockContainer').innerText;
+const paper = document.getElementById('paperContainer').innerText;
+const scissors = document.getElementById('scissorsContainer').innerText;
+const textContainer = document.getElementById('textContainer');
+const textInfo = document.getElementById('textInfo')
 
+const choices = document.querySelectorAll('.option');
 for (const choice of choices) {
     let textOnHover;
     switch (choice.id) {
@@ -15,36 +20,61 @@ for (const choice of choices) {
     }
     const textInfo = document.getElementById('textInfo')
     const originalTextInfo = textInfo.innerText
-    choice.addEventListener('mouseover', () => {
+
+    function mouseOverEvent() {
         choice.classList.add('background-on-hover')
         textInfo.classList.remove("textContainerAnim")
         textInfo.offsetWidth
         textInfo.classList.add("textContainerAnim")
         textInfo.innerText = textOnHover
-    })
-    choice.addEventListener('mouseout', () => {
+    }
+
+    function mouseOutEvent() {
         textInfo.innerText = originalTextInfo
         textInfo.classList.remove("textContainerAnim")
         textInfo.offsetWidth
         textInfo.classList.add("textContainerAnim")
         choice.classList.remove('background-on-hover')
+    }
+
+    choice.addEventListener('mouseover', mouseOverEvent)
+    choice.addEventListener('mouseout', mouseOutEvent)
+    choice.addEventListener("click", () => {
+        choice.removeEventListener('mouseover', mouseOverEvent)
+        choice.removeEventListener('mouseout', mouseOutEvent)
+        startGame(choice.id)
     })
-    choice.addEventListener("click", startGame(choice.id))
 }
 
 function startGame(option) {
-const optionChosen = document.getElementById(option);
-const optionsContainer = document.getElementById("options");
-const childElements = optionsContainer.children;
+    const optionChosen = document.getElementById(option);
+    const optionsContainer = document.getElementById("options");
+    const childElements = optionsContainer.children;
 
     for (const child of childElements) {
-      // Check if the child element has the id specified in the "option" variable
-      if (childElements[i].id !== option) {
-        // If not, add the "d-none" class to the child element
-        childElements[i].classList.add("d-none");
-      }
+        if (child.querySelector("button") !== optionChosen) {
+            child.classList.add("d-none");
+        }
     }
 
+    textContainer.classList.add('d-none');
+
+    const versusContainer = document.getElementById('versusContainer')
+    versusContainer.classList.remove("d-none");
+
+    console.log(option);
+    console.log(document.getElementById(option + 'Container'));
+    const enemyContainer = document.getElementById('enemyContainer')
+    enemyContainer.classList.remove('d-none');
+
+    const enemyChoice = rollEnemy();
+
+    enemyContainer.querySelector('pre').innerText = (enemyChoice == 'rock') ? rock : (enemyChoice == 'paper') ? paper : scissors;
+
+    //animacao pra rodar as opcoes do inimigo e contador
+
+    const result = checkWinner(option, enemyChoice);
+    showResults(result);
 }
 
 function rollEnemy() {
@@ -57,4 +87,43 @@ function rollEnemy() {
         case 3:
             return 'scissors';
     }
+}
+
+function checkWinner(player, enemy) {
+    switch (player) {
+        case 'rock':
+            switch (enemy) {
+                case 'rock':
+                    return 'Draw';
+                case 'paper':
+                    return 'Lose';
+                case 'scissors':
+                    return 'Win';
+            }
+        case 'paper':
+            switch (enemy) {
+                case 'rock':
+                    return 'Win';
+                case 'paper':
+                    return 'Draw';
+                case 'scissors':
+                    return 'Lose';
+            }
+        case 'scissors':
+            switch (enemy) {
+                case 'rock':
+                    return 'Lose';
+                case 'paper':
+                    return 'Win';
+                case 'scissors':
+                    return 'Draw';
+            }
+            break;
+    }
+}
+
+function showResults(result) {
+
+    textInfo.innerText = document.getElementById('text' + result).innerText
+    textContainer.classList.remove('d-none')
 }
